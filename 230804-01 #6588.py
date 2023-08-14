@@ -2,8 +2,10 @@ import math, sys
 
 input = sys.stdin.readline
 
-number = 100
+number = 1000000
 prime = [True for i in range(number+1)]
+
+prime[1] = 0
 
 for i in range (2, int(math.sqrt(number))+1):
     if(prime[i] == True):
@@ -11,13 +13,6 @@ for i in range (2, int(math.sqrt(number))+1):
         while i*j <= number:
             prime[i*j] = False
             j += 1
-
-for i in range(1, number):
-    if(prime[i] != 0):
-        prime[i] = True
-
-prime[0] = 0
-prime[1] = 0
 
 while(True):
     hasGold = False
