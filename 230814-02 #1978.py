@@ -14,19 +14,14 @@ for i in range (2, int(math.sqrt(MAX))+1):
             j += 1
 
 cnt = 0
-i = 0
 N = int(input())
-
 n = list(map(int, sys.stdin.readline().split()))
-print(n)
     
 while N > 0:
     temp = n[N-1]
-    print(temp)
     
     if prime[temp]:
         cnt += 1
         
     N -= 1
-    i += 1
 print(cnt)
